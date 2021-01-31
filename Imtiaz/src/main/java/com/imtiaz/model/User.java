@@ -1,8 +1,18 @@
 package com.imtiaz.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "ImtiazUser")
 public class User {
 	
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
 	private String fullname;
 	private String lastname;
 	public User() {
@@ -13,6 +23,12 @@ public class User {
 		super();
 		this.fullname = fullname;
 		this.lastname = lastname;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getFullname() {
 		return fullname;
@@ -25,6 +41,10 @@ public class User {
 	}
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", fullname=" + fullname + ", lastname=" + lastname + "]";
 	}
 	
 	
