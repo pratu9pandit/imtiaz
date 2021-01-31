@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>index</title>
+</head>
+<body>
+	<form action="/Imtiaz/create" method="post" th:object="${formData}">
+		First name: <input type="text" th:field="${formData.fullname}" /> <br> 
+		Last name: <input type="text" th:field="${formData.lastname}" />
+		<input type="submit" value="Submit"/>
+	</form>
+</body>
+</html>
