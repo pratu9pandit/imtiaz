@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8"/>
+    <title>Spring Boot Thymeleaf Application - Bootstrap Autocomplete</title>
+
+    <link th:rel="stylesheet" th:href="@{assets/select2-develop/dist/css/select2.css}"/>
+    <link th:rel="stylesheet" th:href="@{assets/select2-bootstrap4-theme-master/dist/select2-bootstrap4.css}"/>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+	
+</head>
+
+<body>
+
+<div class="container">
+		<form action="/Imtiaz/employees/emp" th:object="${emp}" method="POST">
+		
+		<input type="text" placeholder="FirstName " th:field="${emp.empFirstName}">
+		
+		<input type="text" placeholder="LastName " th:field="${emp.empLastName}">
+		
+		<input type="text" placeholder="Email " th:field="${emp.empEmail}">
+		
+		<button type="submit">Create Employee</button>
+		
+		</form>
+	</div>
+
+
+
+
+
+</body>

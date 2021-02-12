@@ -1,9 +1,12 @@
 package com.imtiaz.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Project {
@@ -13,6 +16,9 @@ public class Project {
 	private String name;
 	private String stage;
 	private String description;
+	
+	@OneToMany(mappedBy = "myProject")
+	private List<Employee> employees;
 	public Project() {
 		super();
 		// TODO Auto-generated constructor stub

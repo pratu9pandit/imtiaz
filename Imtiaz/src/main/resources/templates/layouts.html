@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="header">
+<meta charset="UTF-8" />
+<title>Spring Boot Thymeleaf Application - Bootstrap
+	Autocomplete</title>
+	
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- <link th:rel="stylesheet"
+	th:href="@{assets/select2-develop/dist/css/select2.css}" />
+<link th:rel="stylesheet"
+	th:href="@{assets/select2-bootstrap4-theme-master/dist/select2-bootstrap4.css}" />
+<link th:rel="stylesheet"
+	th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} " />
+ -->
+</head>
+<nav th:fragment= "navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Project IO</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" th:href="@{/}">Home </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{employees}">Employees</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" th:href="@{projects}">Projects</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
