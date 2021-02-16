@@ -1,5 +1,6 @@
 package com.imtiaz.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -29,6 +30,12 @@ public class Project {
 		this.stage = stage;
 		this.description = description;
 	}
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
+	}
 	public int getProjectId() {
 		return projectId;
 	}
@@ -57,6 +64,13 @@ public class Project {
 	public String toString() {
 		return "Project [projectId=" + projectId + ", name=" + name + ", stage=" + stage + ", description="
 				+ description + "]";
+	}
+	public void addEmployee(Employee emp) {
+		// TODO Auto-generated method stub
+		if(employees==null) {
+			employees = new ArrayList<Employee>();
+		}
+		employees.add(emp);
 	}
 	
 	

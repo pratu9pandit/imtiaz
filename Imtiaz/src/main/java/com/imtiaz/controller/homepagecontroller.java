@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.imtiaz.dao.EmpRepo;
 import com.imtiaz.dao.ProjectRepository;
+import com.imtiaz.dto.EmployeeProject;
 import com.imtiaz.model.Employee;
 import com.imtiaz.model.Project;
 
@@ -27,8 +28,8 @@ public class homepagecontroller {
 		List<Project> projects= proRepo.findAll();
 	     model.addAttribute("projectList",projects);
 	     
-	     List<Employee> employee = empRepo.findAll();
-	     model.addAttribute("employeeList",employee);
+	     List<EmployeeProject> employeeProjectcnt = empRepo.employeeProjects();
+	     model.addAttribute("employeeListProjectcnt",employeeProjectcnt);
 	     return "homefolder/home";
 	}
     

@@ -1,5 +1,7 @@
 package com.imtiaz.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -30,6 +32,13 @@ public class Employee {
 		this.empLastName = empLastName;
 		this.empEmail = empEmail;
 	}
+	
+	public Project getMyProject() {
+		return myProject;
+	}
+	public void setMyProject(Project myProject) {
+		this.myProject = myProject;
+	}
 	public long getEmployeeId() {
 		return employeeId;
 	}
@@ -58,6 +67,10 @@ public class Employee {
 	public String toString() {
 		return "Employee [employeeId=" + employeeId + ", empFirstName=" + empFirstName + ", empLastName=" + empLastName
 				+ ", empEmail=" + empEmail + "]";
+	}
+	public void setProjects(List<Project> asList) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
